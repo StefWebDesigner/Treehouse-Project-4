@@ -1,12 +1,11 @@
-
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
-
 * {
   font-family: 'Lato', sans-serif;
   color: #777;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 p {
@@ -17,11 +16,13 @@ a {
   text-decoration: none;
 }
 
+body {
+  background-color: #4da2bb;
+}
 
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
-
 .headline-primary {
   color: #58e1c1;
   margin-left: 10px;
@@ -47,24 +48,28 @@ a {
   border-radius: 5px;
 }
 
-
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
-
 .container {
   padding: 0 10px;
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1em 10px;
 }
 
 [class^=col] {
   margin-top: 10px;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
@@ -119,19 +124,24 @@ a {
 }
 
 .card {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
-
 
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
-
 .nav {
   padding-left: 0;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav-link {
@@ -140,9 +150,8 @@ a {
   padding: 10px 0;
   display: block;
   width: 100%;
-  transition: 
-    background-color .2s ease-in-out, 
-    color .2s ease-in-out;
+  -webkit-transition: background-color .2s ease-in-out,  color .2s ease-in-out;
+  transition: background-color .2s ease-in-out,  color .2s ease-in-out;
 }
 
 .nav-link:hover {
@@ -150,11 +159,9 @@ a {
   background-color: #58e1c1;
 }
 
-
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
-
 .btn {
   margin-top: 15px;
   width: 100%;
@@ -185,16 +192,15 @@ a {
   background-color: #fd7856;
 }
 
-
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
-
 .form {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
-.input{
+.input {
   display: block;
   width: 94%;
   margin: 10px auto 0;
@@ -204,25 +210,23 @@ a {
 }
 
 .hidden {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
-
 
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
-
 .img-avatar {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
 }
 
@@ -242,109 +246,115 @@ a {
   margin-right: auto;
 }
 
-
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
-
-.container {
-  max-width: 1400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  [class^=col] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
+  .col-1 {
+    -ms-flex-preferred-size: 8.33%;
+        flex-basis: 8.33%;
+  }
+  .col-2 {
+    -ms-flex-preferred-size: 16.67%;
+        flex-basis: 16.67%;
+  }
+  .col-3 {
+    -ms-flex-preferred-size: 25.00%;
+        flex-basis: 25.00%;
+  }
+  .col-4 {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+  .col-5 {
+    -ms-flex-preferred-size: 41.67%;
+        flex-basis: 41.67%;
+  }
+  .col-6 {
+    -ms-flex-preferred-size: 50.00%;
+        flex-basis: 50.00%;
+  }
+  .col-7 {
+    -ms-flex-preferred-size: 58.33%;
+        flex-basis: 58.33%;
+  }
+  .col-8 {
+    -ms-flex-preferred-size: 66.67%;
+        flex-basis: 66.67%;
+  }
+  .col-9 {
+    -ms-flex-preferred-size: 75.00%;
+        flex-basis: 75.00%;
+  }
+  .col-10 {
+    -ms-flex-preferred-size: 83.33%;
+        flex-basis: 83.33%;
+  }
+  .col-11 {
+    -ms-flex-preferred-size: 91.67%;
+        flex-basis: 91.67%;
+  }
+  .col-12 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-link {
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+  }
+  .btn {
+    padding: 10px 30px;
+  }
+  .btn + .btn {
+    margin-left: 10px;
+  }
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
-
-.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row {
-  flex-direction: row;
-}
-
-[class^=col] {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  align-items: center;
-}
-
-[class^=col] + [class^=col] {
-  margin-left: 10px;
-}
-
-.col-1 {
-  flex-basis: 8.33%;
-}
-
-.col-2 {
-  flex-basis: 16.67%;
-}
-
-.col-3 {
-  flex-basis: 25.00%;
-}
-
-.col-4 {
-  flex-basis: 33.33%;
-}
-
-.col-5 {
-  flex-basis: 41.67%;
-}
-
-.col-6 {
-  flex-basis: 50.00%;
-}
-
-.col-7 {
-  flex-basis: 58.33%;
-}
-
-.col-8 {
-  flex-basis: 66.67%;
-}
-
-.col-9 {
-  flex-basis: 75.00%
-}
-
-.col-10 {
-  flex-basis: 83.33%;
-}
-
-.col-11 {
-  flex-basis: 91.67%;
-}
-
-.col-12 {
-  flex-basis: 100%;
-}
-
-.nav {
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.nav-link {
-  flex-basis: 100px;
-}
-
-.btn {
-  padding: 10px 30px;
-}
-
-.btn + .btn {
-  margin-left: 10px;
-}
-
-.logo {
-  margin-left: initial;
-  margin-right: initial;
-}
-
-}
+/*# sourceMappingURL=input.css.map */
