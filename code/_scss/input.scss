@@ -3,14 +3,27 @@
 // All SCSS styles                      
 // =============================================
 
-@import "input.scss";
-@import "_base-styles.scss";
-@import "_button-styles.scss";
-@import "_form-styles.scss";
-@import "_nav-styles.scss";
-@import "_typography-styles.scss";
-@import "_media.scss";
-@import "_variables.scss";
+
+// @import '/code/_scss/components/forms/form-style';
+// @import '/code/_scss/components/forms/form-style.scss
+// @import '/code/_scss/components/forms/form-style';
+// @import "/code/_scss/components/forms/form-style";
+
+
+
+@import "../code/_scss/components/classes/base-styles";
+@import 'button-styles.scss';
+@import '/code/_scss/components/forms/form-style';
+@import '/code/_scss/components/navigation/nav-styles';
+@import '/code/_scss/components/fonts/typography-styles';
+@import '/code/_scss/components/media-queries/media';
+@import '/code/_scss/utilities/variables/variables';
+@import '/code/_scss/components/grid/grid-styles';
+@import '/code/_scss/components/classes/images-styles';
+
+
+
+
 
 
 // ============================================= 
@@ -24,7 +37,7 @@
 //Base Styles                      
 // =============================================
 
-@include _base-styles;
+@include base-styles;
   
 // ============================================= 
 //typography                       
@@ -37,75 +50,8 @@
 //Grid Systems                      
 // =============================================
   
-  .container {
-    padding: 0 10px;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 10px;
-  }
-  
-  [class^=col] {
-    margin-top: 10px;
-    flex-basis: 100%;
-    min-height: 25px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .theme.col-1 {
-    background-color: $col-color-1;
-  }
-  
-  .theme.col-2 {
-    background-color: $col-color-2;
-  }
-  
-  .theme.col-3 {
-    background-color: $col-color-3;
-  }
-  
-  .theme.col-4 {
-    background-color: $col-color-4;
-  }
-  
-  .theme.col-5 {
-    background-color: $col-color-5;
-  }
-  
-  .theme.col-6 {
-    background-color: $col-color-6;
-  }
-  
-  .theme.col-7 {
-    background-color: $col-color-7;
-  }
-  
-  .theme.col-8 {
-    background-color: $col-color-8;
-  }
-  
-  .theme.col-9 {
-    background-color: $col-color-9;
-  }
-  
-  .theme.col-10 {
-    background-color: $col-color-10;
-  }
-  
-  .theme.col-11 {
-    background-color: $col-color-11;
-  }
-  
-  .theme.col-12 {
-    background-color: $col-color-12;
-  }
-  
-  .card {
-    flex-basis: 100%;
-  }
+@include _grid-styles;
+
   
   
 // ============================================= 
@@ -137,31 +83,9 @@
 // ============================================= 
 //Image                      
 // =============================================
-  
-  .img-avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    max-width: 100%; 
-    max-height: 100%;
-  }
-  
-  .img-frame {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    max-width: 100%;
-    padding: 13px;
-    border: 1px solid #ccc;
-  }
-  
-  .img-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
+@include _images-style;
+
   
   
 // ============================================= 
