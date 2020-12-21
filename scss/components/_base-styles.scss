@@ -1,0 +1,26 @@
+// ============================================= 
+//                  Base style                      
+// =============================================
+
+
+
+
+* {
+    font-family: 'Lato', sans-serif;
+    color: $color-secondary;
+    box-sizing: border-box;
+  }
+  
+  p {
+    line-height: 1.45em;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+
+    background-color: $background;
+
+  }

@@ -1,0 +1,34 @@
+// ============================================= 
+//                   Button - Styles                  
+// =============================================
+
+  
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  // background-color: $btn-color;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+
+.default {
+  background-color: $btn-c-def;
+}
+
+.error {
+  background-color: $btn-c-error;
+}
+
+.info {
+  background-color: $btn-c-info;
+}
+
+.success {
+  background-color: $btn-c-success;
+}
+
+.warning {
+  background-color: $btn-c-warning;
+}
